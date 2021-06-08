@@ -1,0 +1,2282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="disegraf">
+	<title>SelfiesInteractivos impactanta con una selfiexperiencia</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Favicons 
+<link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="img/favicons/manifest.json">
+<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="img/favicons/favicon.ico">
+<meta name="msapplication-config" content="img/favicons/browserconfig.xml">-->
+
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body,
+		html {
+			font-family: 'Century Gothic', "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			color: #747b8f;
+			scroll-behavior: smooth;
+			overflow-x: hidden;
+		}
+		
+		button:focus {
+			outline: 0;
+		}
+		
+		h1 {
+			font-size: 36px;
+			font-family: 'Simply Rounded', "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		}
+		
+		h2 {
+			font-size: 28px;
+			font-family: 'Simply Rounded', "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		}
+		
+		
+		.primerColor {
+			color: #9d27b9;
+		}
+		
+		.segundoColor {
+			color: #8a05ce;
+		}
+		.tercerColor
+		{
+			color: #502364;
+		}
+		.cuartoColor{
+			color: #4c2882;
+		}
+		
+		.primerBackground{
+			background-color:#9d27b9;
+		}
+		.segundoBackground{
+			background-color:#8a05ce;
+		}
+		.terceroBackground{
+			background-color:#502364;
+		}
+		.cuartoBackground{
+			background-color:#4c2882;
+		}
+		
+		
+		
+		.secondaryBackground {}
+		
+		
+		.customNav {
+			font-family: 'Simply Rounded', "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.parallax-bg {
+		  position: absolute;
+		  left: 0;
+		  top: 0;
+		  width: 130%;
+		  height: 100%;
+		  -webkit-background-size: cover;
+		  background-size: cover;
+		  background-position: center;
+		}
+		.parallax-bg2 {
+		  position: absolute;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  -webkit-background-size: cover;
+		  background-size: cover;
+		  background-position: center;
+		}
+		.parallax-bg3 {
+		  position: absolute;
+		  left: 0;
+		  top: 0;
+		  width: 110%;
+		  height: 100%;
+		  -webkit-background-size: cover;
+		  background-size: cover;
+		  background-position: center;
+		}
+		.sliderHeader {
+			position: relative;
+			overflow: hidden;
+			background-color: black;
+			width: 100%;
+			margin-top: 80px;
+			/*-webkit-mask-box-image: url(img/mask.png);*/
+		}
+		
+		.mascaraBanner {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: auto;
+			z-index: 9955;
+		}
+		
+		.banner1-girl
+		{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 52.6%;
+		}
+		.banner2-tablet
+		{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 47%;
+		}
+		.banner3-kinect
+		{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 50.67%;
+		}
+		.banner4-mandos
+		{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 60%;
+		}
+		
+		
+		.paginaTipo1 {
+			margin-top: 100px;
+			margin-bottom: 100px;
+			text-align: center;
+			background-image: url(img/bg1.svg);
+			background-size: 100% auto;
+			background-position: 0 -25px;
+			position: relative;
+			background-repeat: no-repeat;
+		}
+		
+		.iconosIniciales {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			margin-top: 5%;
+		}
+		
+		.iconosIniciales>li {
+			display: inline-block;
+			width: 28%;
+			margin-left: 2%;
+			margin-right: 2%;
+		}
+		
+		
+		/*******************portolio****************************/
+		
+		.paginaTipo2
+		{
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+		
+		.portfolioContent
+		{
+			position: relative;
+			overflow: auto;
+			width: 100%;
+		}
+		.portfolioMod
+		{
+			float: left;
+			width: 50%;
+			position: relative;
+			overflow: auto;
+		}
+		.portfolioMod:after
+		{
+			content: "";
+			position: absolute;
+			background-color: #502364;
+			width: 72px;
+			height: 72px;
+			top: 50%;
+			left: 50%;
+			margin-top: -36px;
+			margin-left: -36px;
+			border-radius: 50%;
+			
+			background-image: url(img/arrow-porfolio.svg);
+			background-position: 45% center;
+			background-repeat: no-repeat;
+			
+			
+		}
+		
+		.portfolioReverse:after
+		{
+			 -webkit-transform: scaleX(-1);
+			  -moz-transform: scaleX(-1);
+			  -o-transform: scaleX(-1);
+			  transform: scaleX(-1);
+		}
+		
+		.portfolioMod:hover {
+			
+			-webkit-transition: .4s;
+			transition: .4s;
+			
+			outline: 10px solid rgba(157,39,185,0.5);
+			outline-offset: -10px;
+		}/**/
+		.portfolioMod h2,.portfolioMod p
+		{
+			color: white;	
+		}
+		.portfolio-image
+		{
+			float: left;
+			width: 50%;
+		}
+		.portfolio-text
+		{
+			width: 50%;
+			background-color: #502364;
+			height: 100%;
+			
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction:column;
+			position: absolute;
+			right: 0;
+			z-index: -10;
+		}
+		.portfolioReverse .portfolio-image
+		{
+			float: right;
+			width: 50%;
+		}
+		.portfolioReverse .portfolio-text
+		{
+			width: 50%;
+			left: 0;
+		}
+		
+		.paginaTipo3 {
+			background-color: #ebecec;
+			padding-top: 100px;
+		}
+		.paginaTipo3 p
+		{
+			text-align: justify;
+		}
+		.targetMod {
+			height: 100%;
+			max-width: 50%;
+			float: right;
+			background-color: red;
+			border-left: 3px solid #1C6EA4;
+			border-radius: 0px 0px 0px 40px;
+			border-bottom: 3px solid #1C6EA4;
+			padding-left: 70px;
+		}
+		
+		.custom-nav>li>a
+		{
+			color: #502364;
+		}
+		.active-btn-portfolio
+		{
+			background-color: #8a05ce;
+			color: white !important;
+		}
+		
+		/*******************portolio****************************/
+		
+		.custom-text-Slider {
+			color: white;
+			position: absolute;
+			margin-left: 10%;
+			margin-top: 10%;
+			width: 32%;
+		}
+		
+		.custom-text-Slider h1 {
+			color: white;
+			font-size: 38px;
+			line-height: 45px;
+		}
+		
+		.custom-text-Slider h1 span {
+			font-size: 50px;
+		}
+		
+		.boton {
+			border-width: 2px;
+			border-radius: 24px;
+			border-color: rgb(255, 255, 255);
+			border-style: solid;
+			background-color: rgba(0, 0, 0, 0.549);
+			padding: 15px;
+			min-width: 200px;
+			text-align: center;
+			display: inline-block;
+			margin-top: 10px;
+			margin-right: 10px;
+			cursor: pointer;
+		}
+		
+		.boton:hover,
+		.boton:active {
+			border-width: 2px;
+			border-radius: 24px;
+			border-color: rgb(255, 255, 255);
+			border-style: solid;
+			background-color: rgba(0, 160, 219, 0.549);
+		}
+		
+		.box-left-text {
+			/*background-color: rgba(77, 0, 1, 0.30);*/
+			position: relative;
+		}
+		
+		.box-right-text {
+			/*background-color: rgba(0, 99, 252, 0.12);*/
+			position: relative;
+		}
+		
+		.box-right-slider {
+			/*background-color: rgba(0, 255, 13, 0.20);
+			border-radius: 119px 0px 0px 119px;*/
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.box-left-slider {
+			/*background-color: rgba(248, 0, 255, 0.22);*/
+			position: relative;
+			/*border-radius: 0px 119px 119px 0px;*/
+			overflow: hidden;
+		}
+		
+		.bg-target {
+			background-image: url(img/bg-target.svg);
+			background-position: center;
+			position: relative;
+		}
+		
+		.text-content-box-left {
+			height: 100%;
+			width: 68%;
+			float: right;
+			/*background-color: red;*/
+			padding: 10%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			box-sizing: border-box;
+		}
+		
+		.text-content-box-right {
+			height: 100%;
+			width: 68%;
+			float: left;
+			/*background-color: red;*/
+			padding: 10%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			box-sizing: border-box;
+		}
+		
+		.lines {
+			width: 63%;
+			height: 100%;
+			position: absolute;
+			background-image: url(img/bg-target-4.png);/**/
+			background-size: 100% 100%;
+			left: 18.5%;
+			top: 0;
+			
+			/*background-color: orange;*/
+			z-index: 1;
+		}
+		
+		.paginaTipo4 {
+			text-align: center;
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+		
+		.marcoFaq {
+			border-radius: 26px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 5.673px 1.953px 27px 0px rgba(58, 110, 195, 0.28);
+			width: 100%;
+			padding: 4%;
+			/*min-height: 700px;*/
+			background-image: url(img/iPhoneX-faq.png);
+			background-position: bottom right;
+			background-repeat: no-repeat;
+			background-size: 28% auto;
+		}
+		
+		.btn-acordeon {
+			font-family: 'Simply Rounded', "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			border-radius: 26px;
+			background-color: rgb(239, 239, 250);
+			border: none;
+			color: #707070;
+			font-size: 18px;
+			width: 100%;
+			padding: 20px;
+			text-align: left;
+			margin-bottom: 20px;
+			position: relative;
+		}
+		
+		.btn-acordeon:after {
+			content: "+";
+			float: right;
+			background-color: #8a05ce;
+			color: white;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			margin-top: -18px;
+			right: -18px;
+			font-size: 24px;
+			border: solid 2px white;
+			font-weight: lighter;
+		}
+		
+		.btn-acordeon[aria-expanded="true"] {
+			border-radius: 20px 20px 0px 0px;
+			-moz-border-radius: 20px 20px 0px 0px;
+			margin-bottom: 0px;
+			color: #502364;
+		}
+		
+		.btn-acordeon[aria-expanded="true"]:after {
+			display: none;
+		}
+		
+		.contenido-acordeon {
+			background-color: rgb(239, 239, 250);
+			border-radius: 0px 0px 20px 20px;
+			-moz-border-radius: 0px 0px 20px 20px;
+			margin-bottom: 20px;
+			padding: 25px;
+			padding-top: 0;
+			text-align: justify;
+			visibility: hidden;
+			font-size: 15px;
+		}
+		
+		.contenido-acordeon ol,
+		.contenido-acordeon ul {
+			padding: 0;
+			margin: 0;
+		}
+		
+		.contenido-acordeon ul {
+			list-style: none;
+			text-align: left;
+			font-size: 14px;
+		}
+		
+		.show {
+			visibility: visible;
+		}
+		
+		.video {
+			border-style: solid;
+			border-width: 5px;
+			border-color: rgb(255, 255, 255);
+			border-radius: 71px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 17.854px 22.852px 79px 0px rgba(26, 99, 138, 0.27);
+			position: absolute;
+			width: 80%;
+			left: 10%;
+			overflow: hidden;
+			top: 40px;
+		}
+		.boton-nosotros
+		{
+			width: 100%;
+			height: 300px;
+			background-color: #f4f6fa;
+		}
+		.play-button {
+			color: #4dbcf3;
+			background-color: #4c2882;
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			text-align: center;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -50px;
+			line-height: 59px;
+			font-size: 23px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+			animation: shadow-pulse 3s infinite;
+			z-index: 9;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+		
+		.play-button:after {
+			content: '';
+			width: 50%;
+			height: 50%;
+			background-image: url(img/triangulo.png);
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		/*Video Play Button Effect */
+		
+		@keyframes shadow-pulse {
+			0% {
+				box-shadow: 0 0 0 0 rgba(76, 40, 130, 0.7);
+			}
+			100% {
+				box-shadow: 0 0 0 25px rgba(76, 40, 130, 0);
+			}
+		}
+		
+		@keyframes shadow-pulse-big {
+			0% {
+				box-shadow: 0 0 0 0 rgba(76, 40, 130, 0.5);
+			}
+			100% {
+				box-shadow: 0 0 0 50px rgba(76, 40, 130, 0);
+			}
+		}
+		/*Video Play Button Effect */
+		
+		.paginaTipo5 {
+			background-image: url(img/bg-nosotros.jpg);
+			background-position: top center;
+			
+		}
+		
+		.paginaTipo6 {
+			padding-top: 100px;
+			padding-bottom: 100px;
+			background-color: #f4f6fa;
+			text-align: center;
+			background-position: center;
+			background-size: cover;
+		}
+		
+		.telefono {
+			text-align: left;
+			font-size: 14px;
+		}
+		
+		.direccion {
+			text-align: center;
+			font-size: 14px;
+		}
+		
+		.correo {
+			text-align: right;
+			font-size: 14px;
+		}
+		
+		.redes-sociales {
+			list-style: none;
+			float: right;
+		}
+		
+		.redes-sociales li {
+			display: inline-block;
+			width: 32px;
+			position: relative;
+		}
+		
+		.redes-sociales li img {
+			width: 100%;
+		}
+		
+		.creditos {
+			text-align: left;
+			font-size: 14px;
+		}
+		
+		.redes {
+			text-align: right;
+		}
+		
+		.nosotros-top {
+			height: 100px;
+			background-image: url(img/nosotros-top.png);
+			background-position: center;
+		}
+		
+		.nosotros-middle {
+			height: 703px;
+			background-image: url(img/nosotros-middle.png);
+			background-position: center;
+		}
+		
+		.nosotros-bottom {
+			height: 100px;
+			background-image: url(img/nosotro-bottom.png);
+			background-position: center;
+		}
+		
+		.logo-holigram {
+			width: 80%;
+		}
+		
+		.content-nosotros {
+			margin-top: 25px;
+			color: white;
+		}
+		
+		.footer1 {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: white;
+		}
+		
+		.footer2 {
+			background-color: black;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: white;
+		}
+		
+		.card-formulario {
+			border-radius: 46px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0px 7px 36.4px 3.6px rgba(154, 166, 209, 0.42);
+			width: 80%;
+			margin: auto;
+			padding: 5%;
+		}
+		
+		.custom-input {
+			border-radius: 12px;
+			border: none;
+			background-color: rgb(233, 242, 247);
+			margin-bottom: 20px!important;
+			padding: 10px!important;
+			width: 100%;
+		}
+		
+		.btn-formulario {
+			background-color: rgb(0, 102, 255);
+			border: none;
+			border-radius: 25px;
+			color: white;
+			padding: 20px;
+			min-width: 200px;
+		}
+		
+		.iconosContenidos {
+			position: absolute;
+			filter: none;
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+			width: 21.825%;
+			z-index: 255;
+			cursor: pointer;
+		}
+		
+		.iconosContenidos:hover,
+		.iconosContenidos:active,
+		.icono-activo {
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			-ms-filter: grayscale(0%);
+			-o-filter: grayscale(0%);
+		}
+		
+		.icono1 {
+			margin-top: 17%;
+			margin-left: 14%;
+		}
+		
+		.icono2 {
+			margin-top: 37%;
+			margin-left: 0;
+		}
+		
+		.icono3 {
+			margin-top: 62%;
+			margin-left: 0;
+		}
+		
+		.icono4 {
+			margin-top: 85%;
+			margin-left: 14%;
+		}
+		
+		.icono1Equipos {
+			position: absolute;
+			color: white;
+			background-color: #03326c;
+			width: 80px;
+			height: 80px;
+			top: 86.15%;
+			margin-top: -40px;
+			left: 20%;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.icono2Equipos {
+			position: absolute;
+			color: white;
+			background-color: #03326c;
+			width: 80px;
+			height: 80px;
+			top: 86.15%;
+			margin-top: -40px;
+			right: 20%;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.contenidos-contenidos {
+			display: none;
+		}
+		
+		 .slide-contenidos
+		{
+			background-color: white;
+		}
+		.pagination-target
+		{
+			position: relative !important;
+			
+		}
+		.pagination-target .swiper-pagination-bullet
+		{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: white;
+			margin: 0px 5px;
+			border: 2px solid #3d3e65;
+			-webkit-transition: all 0.3s linear;
+			-o-transition: all 0.3s linear;
+			transition: all 0.3s linear;
+		}
+		.pagination-target .swiper-pagination-bullet-active {
+			background: transparent;
+			-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
+			border-color: #00a0da;
+			background-color: #00a0da !important;
+		}
+		.bg-top
+		{
+			width:100%;
+			height:100%;
+			background-color: rgba(0, 0, 0, 0.83);
+			position:fixed;
+			z-index:9991;
+
+			display: flex;
+		justify-content:center;
+		align-items:center;
+			top: 0;
+			left: 0;
+
+
+		}
+		.bg-top-inner
+		{
+			width:80%;
+			height:auto;
+			display:inline-block;
+			position:relative;
+		}
+		.closePopup {
+		  position: absolute;
+		  right: 32px;
+		  top: 32px;
+		  width: 32px;
+		  height: 32px;
+		  opacity: 0.8;
+		  cursor:pointer;
+		  display:block;
+			z-index:9992;
+		}
+		.closePopup:hover {
+		  opacity: 1;
+		}
+		.closePopup:before, .closePopup:after {
+		  position: absolute;
+		  left: 15px;
+		  content: ' ';
+		  height: 33px;
+		  width: 3px;
+		  background-color: #3bb0e6;
+		}
+		.closePopup:before {
+		  transform: rotate(45deg);
+		}
+		.closePopup:after {
+		  transform: rotate(-45deg);
+		}
+		
+		.loader{
+		  width: 100px;
+		  height: 100px;
+		  border-radius: 100%;
+		  position: relative;
+		  margin: 0 auto;
+		}
+
+		/* LOADER 6 */
+
+		#loader-6{
+		  position: absolute;
+			left: 50%;
+			top: 50%;
+			
+		}
+
+		#loader-6 span{
+		  display: inline-block;
+		  width: 5px;
+		  height: 20px;
+		  background-color: #3498db;
+		}
+
+		#loader-6 span:nth-child(1){
+		  animation: grow 1s ease-in-out infinite;
+		}
+
+		#loader-6 span:nth-child(2){
+		  animation: grow 1s ease-in-out 0.15s infinite;
+		}
+
+		#loader-6 span:nth-child(3){
+		  animation: grow 1s ease-in-out 0.30s infinite;
+		}
+
+		#loader-6 span:nth-child(4){
+		  animation: grow 1s ease-in-out 0.45s infinite;
+		}
+
+		@keyframes grow{
+		  0%, 100%{
+			-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			-o-transform: scaleY(1);
+			transform: scaleY(1);
+		  }
+
+		  50%{
+			-webkit-transform: scaleY(1.8);
+			-ms-transform: scaleY(1.8);
+			-o-transform: scaleY(1.8);
+			transform: scaleY(1.8);
+		  }
+		}
+			
+		.screenPhone
+		{
+			width: 53.76%;
+			height: 61.23%;
+			position: absolute;
+			background-color: #EFEFEF;
+			left: 43.15%;
+			top: 25.38%;
+			background-image: url(img/loader.gif);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		
+		.titulo1
+		{
+			width: 29.5%;
+		}
+		
+		.titulo3,.titulo3
+		{
+			width: 29.5%;
+		}
+		
+
+		@media only screen and (max-width:1500px) {
+			.custom-text-Slider h1 {
+				font-size: 30px;
+				line-height: 35px;
+			}
+			.custom-text-Slider h1 span {
+				font-size: 40px;
+			}
+			.custom-text-Slider {
+				width: 30%;
+			}
+			.boton {
+				padding: 10px;
+				min-width: 150px;
+			}
+			.paginaTipo3 {
+				padding-top: 30%;
+			}
+			.text-content-box-left>h2,
+			.text-content-box-right>h2 {
+				font-size: 30px;
+			}
+			.titulo3,.titulo4
+			{
+				
+			}
+		}
+		
+		@media only screen and (max-width:1200px) {
+			.custom-text-Slider h1 {
+				font-size: 24px;
+				line-height: 25px;
+			}
+			.custom-text-Slider h1 span {
+				font-size: 24px;
+			}
+			.custom-text-Slider {
+				width: 26%;
+			}
+			.boton {
+				padding: 5px;
+				min-width: 100px;
+				font-size: 14px;
+			}
+			.rectangle {
+				position: absolute;
+				width: 65%;
+				z-index: 39;
+				margin-left: 15%;
+				margin-top: 22%;
+				padding: 50px;
+			}
+			.text-content-box-left>h2,
+			.text-content-box-right>h2 {
+				font-size: 25px;
+			}
+			.text-content-box-left>p,
+			.text-content-box-right>p {
+				font-size: 14px;
+			}
+			.text-content-box-left,
+			.text-content-box-right {
+				width: 80%;
+				padding: 8%;
+			}
+			.video {
+				top: 80px;
+			}
+			.telefono,
+			.direccion,
+			.correo {
+				text-align: center;
+				font-size: 12px;
+			}
+			.telefono img,
+			.direccion img,
+			.correo img {
+				width: 16px;
+				height: auto;
+			}
+			.card-formulario {
+				width: 90%;
+			}
+			.icono1Equipos,
+			.icono2Equipos {
+				width: 60px;
+				height: 60px;
+				margin-top: -30px;
+			}
+		}
+		
+		@media only screen and (max-width:1024px) {
+			.custom-text-Slider h1 {
+				font-size: 18px;
+				line-height: normal;
+			}
+			.custom-text-Slider h1 span {
+				font-size: 19px;
+			}
+			.custom-text-Slider {
+				width: 30%;
+			}
+			.boton {
+				padding: 4px;
+				min-width: 50px;
+				font-size: 12px;
+			}
+			.text-content-box-left,
+			.text-content-box-right {
+				width: 100%;
+			}
+		}
+		
+		@media only screen and (max-width:991px) {
+			.rectangle {
+				position: absolute;
+				width: 80%;
+				z-index: 39;
+				margin-left: 5%;
+				margin-top: 10%;
+				padding: 50px;
+			}
+			.video {
+				top: 80px;
+			}
+			.content-nosotros {
+				text-align: center;
+			}
+			.logo-holigram {
+				width: 70%;
+			}
+			.nosotros-middle {
+				height: 600px;
+			}
+			.nosotros-top,
+			.nosotros-bottom {
+				height: 85.34px;
+			}
+			.card-formulario {
+				width: 100%;
+			}
+			.icono1Equipos,
+			.icono2Equipos {
+				width: 50px;
+				height: 50px;
+				margin-top: -25px;
+			}
+		}
+		
+		@media only screen and (max-width:768px) {
+			.custom-text-Slider h1 {
+				font-size: 16px;
+				line-height: normal;
+			}
+			.custom-text-Slider h1 span {
+				font-size: 16px;
+			}
+			.custom-text-Slider {
+				width: 30%;
+			}
+			.rectangle {
+				position: absolute;
+				width: 70%;
+				margin-left: 15%;
+				margin-top: 10%;
+				padding: 25px;
+			}
+			.rectangle h2 {
+				font-size: 25px;
+			}
+			.conent-rectangle {
+				height: 250px;
+			}
+			.sliderEquipos {
+				/*width: 95%;
+				left: 2.5%;
+				top: -25px;
+				position: relative;*/
+				position: relative !important;
+			}
+			.paginaTipo3 {
+				padding-top: 10%;
+			}
+			.marcoFaq {
+				background-size: 20% auto;
+				background-image: none;
+			}
+			.telefono,
+			.direccion,
+			.correo {
+				margin-bottom: 25px;
+			}
+			.redes-sociales {
+				float: inherit;
+				text-align: center;
+			}
+			.creditos {
+				text-align: center;
+				margin-bottom: 25px;
+			}
+			
+			.icono1Equipos {
+				left: 10%;
+				margin-top: -22px;
+			}
+			.icono2Equipos {
+				right: 10%;
+				margin-top: -22px;
+			}
+			.sliderHeader {
+			-webkit-mask-box-image: none;
+			}
+			.portfolioMod
+			{
+				float: inherit;
+				width: 100%;
+				min-height: 200px;
+			}
+			.boton-nosotros {
+				height: 100px;
+			}
+			.video {
+				border-radius: 35px;
+			}
+			
+		}
+		@media only screen and (max-width:767px) {
+			.rectangle {
+				margin-top: -5%;
+			}
+			.sliderEquipos{
+				position: relative;
+			}
+		}
+		
+		@media only screen and (max-width:600px) {
+			.custom-text-Slider {
+				width: 35%;
+			}
+			
+			
+			.portfolioMod {
+				float: inherit;
+				width: 100%;
+				min-height: auto;
+				overflow: hidden;
+			}
+			.portfolio-image {
+				float: inherit;
+				width: 100%;
+				height: 300px;
+				background-color: gray;
+			}
+			.portfolio-image>img
+			{
+				display: none;
+			}
+			.portfolio-text {
+				width: 100%;
+				height: 300px;
+				position: relative;
+			}
+			.portfolioReverse .portfolio-image {
+				float: inherit;
+				width: 100%;
+			}
+			.portfolioReverse .portfolio-text {
+				width: 100%;
+			}
+			
+			.portfolioReverse:after,.portfolioMod:after
+			{
+				 -webkit-transform: scaleX(1);
+				  -moz-transform: scaleX(1);
+				  -o-transform: scaleX(1);
+				  transform: scaleX(1);
+				
+				  -moz-transform:rotate(90deg);  
+				  -webkit-transform:rotate(90deg);  
+				  -o-transform:rotate(90deg);  
+				  -ms-transform:rotate(90deg);  
+				
+				
+			}
+
+		}
+		
+		@media only screen and (max-width:480px) {
+			.icono1Equipos,
+			.icono2Equipos {
+				width: 36px;
+				height: 36px;
+			}
+			.icono1Equipos {
+				left: 5%;
+				margin-top: -15px;
+			}
+			.icono2Equipos {
+				right: 5%;
+				margin-top: -15px;
+			}
+			
+			.custom-text-Slider {
+				width: 60%;
+				margin-left: 10%;
+    			margin-top: 5%;
+			}
+			.custom-text-Slider h1 {
+				font-size: 14px;
+				line-height: normal;
+			}
+			h1
+			{
+				font-size: 24px;
+			}
+			.paginaTipo1 {
+				margin-top: 80px;
+			}
+		}
+		
+		@media only screen and (max-width:320px) {}
+		
+		@media only screen and (max-width:240px) {}
+	</style>
+	<!-- Custom styles for this template -->
+	<link href="fonts/stylesheetCentury.css" rel="stylesheet" type="text/css">
+	<link href="fonts/stylesheetSimply.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="swiper/dist/css/swiper.min.css">
+	<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="bg-top">
+	<a href="javascript:void(0);" onClick="closePopUp()" class="closePopup"></a>
+	<!--<iframe src="https://www.youtube.com/embed/bCSIQ_iSOZ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="bg-top-inner"></iframe>-->
+    <div class="bg-top-inner">
+    <iframe src="" frameborder="0" allowfullscreen style="position:absolute; width:100%; height:100%; z-index: 525;" id="embedVid"></iframe>
+    <img src="img/bg-video.png" class="img-fluid">
+		
+		
+        <div class="loader" id="loader-6">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+		
+		
+    </div>
+</div>
+
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top primerBackground">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+			<img src="img/logo-juego-interactivos.png" width="112" height="56" alt="JuegosInteractivos"/>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto customNav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#solucion">Solución <span class="sr-only">(current)</span></a>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tecnologías</a>
+						<div class="dropdown-menu" aria-labelledby="dropdown07">
+							<a class="dropdown-item" href="#eventosCorporativos">Realidad Virtual</a>
+							<a class="dropdown-item" href="#activacionesBtl">Realidad Aumentada</a>
+							<a class="dropdown-item" href="#standEnFerias">Kinect</a>
+							<a class="dropdown-item" href="#matrimonios">Mandos</a>
+							<a class="dropdown-item" href="#eventosSociales">Táctiles</a>
+						</div>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#equipos">FAQ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#nosotros">Nosotros</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contacto">Contacto</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<div id="inicio" class="sliderHeader">
+		<!--<img src="img/lineBase.svg" alt="mascaraBanner" class="mascaraBanner"/>-->
+		<!-- Swiper -->
+		<div class="swiper-container" id="sliderHead">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide">
+				  <div class="parallax-bg" style="background-image:url(img/banner1.jpg)"  data-swiper-parallax="-20%"></div>
+				  <div class="parallax-bg2 wow zoomIn" style="background-image:url(img/bg1.png)"  data-swiper-parallax="-10%"></div>
+				<div class="custom-text-Slider titulo1 wow fadeInLeft" data-swiper-parallax="-600">
+						<h1><span>Impresiona</span> a tus clientes o acercate a tu público con una opción <span>innovadora</span></h1>
+						<a class="boton" onclick="openPopUp()">ver video</a> <a class="boton">ver detalle</a>
+				  </div>
+				  <img src="img/girl.png" class="banner1-girl wow fadeInUp" data-swiper-parallax="-100"/>
+				  <img src="img/bg-transparent.png" class="img-fluid"/>
+				  
+				</div>
+				  <div class="swiper-slide">
+				  <div class="parallax-bg3" style="background-image:url(img/banner2.jpg)"  data-swiper-parallax="-20%"></div>
+				  <div class="parallax-bg2 wow zoomIn" style="background-image:url(img/bg2.png)"  data-swiper-parallax="-10%"></div>
+				<div class="custom-text-Slider titulo1 wow fadeInLeft" data-swiper-parallax="-600">
+						<h1><span>Impresiona</span> a tus clientes o acercate a tu público con una opción <span>innovadora</span></h1>
+						<a class="boton" onclick="openPopUp()">ver video</a> <a class="boton">ver detalle</a>
+				  </div>
+				  <img src="img/tablet.png" class="banner1-girl wow fadeInUp" data-swiper-parallax="-100"/>
+				  <img src="img/bg-transparent.png" class="img-fluid"/>
+				  
+				</div>
+				
+			  <div class="swiper-slide">
+			    <div class="parallax-bg3" style="background-image:url(img/banner3.jpg)"  data-swiper-parallax="-20%"></div>
+			    <div class="parallax-bg2 wow zoomIn" style="background-image:url(img/bg3.png)"  data-swiper-parallax="-10%"></div>
+				<div class="custom-text-Slider titulo1 wow fadeInLeft" data-swiper-parallax="-600">
+						<h1><span>Impresiona</span> a tus clientes o acercate a tu público con una opción <span>innovadora</span></h1>
+						<a class="boton" onclick="openPopUp()">ver video</a> <a class="boton">ver detalle</a>
+			    </div>
+			    <img src="img/kinect.png" class="banner3-kinect" data-swiper-parallax="-100"/>
+			    <img src="img/bg-transparent.png" class="img-fluid"/>
+				  
+				</div>
+				
+				
+			  <div class="swiper-slide">
+				  <div class="parallax-bg" style="background-image:url(img/banner4.jpg)"  data-swiper-parallax="-20%"></div>
+				  <div class="parallax-bg2 wow zoomIn" style="background-image:url(img/bg4.png)"  data-swiper-parallax="-10%"></div>
+				<div class="custom-text-Slider titulo1 wow fadeInLeft" data-swiper-parallax="-600">
+						<h1><span>Impresiona</span> a tus clientes o acercate a tu público con una opción <span>innovadora</span></h1>
+						<a class="boton" onclick="openPopUp()">ver video</a> <a class="boton">ver detalle</a>
+				  </div>
+				  <img src="img/mandos.png" class="banner4-mandos wow fadeInUp" data-swiper-parallax="-100"/>
+				  <img src="img/bg-transparent.png" class="img-fluid"/>
+				  
+				</div>
+				
+				
+				<div class="swiper-slide">
+					<div class="custom-text-Slider titulo5">
+						<h1>Marca la diferencia en tus celebraciones con nuevas  <span>selfiexperiencias.</span> </h1>
+						<a class="boton" onclick="openPopUp()">ver video</a> <a class="boton">ver detalle</a>
+					</div>
+					<img src="img/banner1.jpg" class="img-fluid"/>
+				</div>
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+	<div id="solucion"></div>
+
+	<main role="main" class="container-fluid" style="margin: 0; padding: 0;">
+
+
+		<section class="paginaTipo1">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<h1 class="mb-4 wow fadeInDown tercerColor">¡Sonríe y hagámonos un Selfie!</h1>
+						<p class="ml-5 mr-5 wow fadeInLeft">Esta solución es la unión de un equipo con un juego personalizado dependiendo de la tecnología que se utilice. Los juegos pueden ser;
+memoria, atrapa productos, rompecabezas , entre otros, o juegos totalmente a medida dependiendo de la marca. Cuando el publico participa de un juego brandeado con el producto que se busca promocionar, se logra generar ; una comunicación directa con el usuario de una manera divertida, registro de sus datos, entrega de premios de forma ordenada y según stock.
+Todas estas soluciones se complementan con diferentes equipos, que podrás elegir dependiendo de tu evento,
+feria o activación BTL.</p>
+						<ul class="iconosIniciales">
+							<li><img src="img/icono1.svg" class="img-fluid wow fadeInLeft"/>
+							</li>
+							<li><img src="img/icono2.svg" class="img-fluid wow fadeInDown"/>
+							</li>
+							<li><img src="img/icono3.svg" class="img-fluid wow fadeInUp"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="paginaTipo3">
+
+			<div class="container-fluid" style="position: relative;">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="wow fadeInDown tercerColor text-center mb-5">Tecnologías Disponibles</h1>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 m-0 p-0 box-left-text">
+						<div class="text-content-box-left">
+							<h2 class="wow fadeInLeft tercerColor">Realidad Virtual</h2>
+							<p class="wow fadeInLeft">es una experiencia que te “transporta” a un entorno de escenas u objetos de apariencia real, con los que podemos interactuar tal como si estuviéramos ahí realmente, para ellos el participante se tiene que colocar unos lentes de realidad virtual Este tipo de tecnología es totalmente inmersiva ideal para que el participante viva experiencias de marca realmente impactante</p>
+							<div class="swiper-pagination swiper-pagination-white pagination-target" id="paginationeventosCorporativos"></div>
+							<div id="activacionesBtl"></div>
+						</div>
+					</div>
+					<div class="col-md-6 m-0 p-0 box-right-slider">
+						<div class="sliderTarget1">
+							<div class="swiper-container" id="sliderEventosCorporativos">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0010_Layer 3.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0009_Layer 4.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0008_Layer 5.jpg" class="img-fluid"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row flex-row-reverse">
+					<div class="col-md-6 m-0 p-0 box-right-text">
+						<div class="text-content-box-right">
+							<h2 class="wow fadeInRight tercerColor">Realidad Aumentada</h2>
+							<p class="wow fadeInRight">Esta tecnología funciona mostrando el lugar real donde te encuentras pero a su ves proyecta en él ciertos elementos virtuales, por lo cual mezcla la realidad con objetos en 3D La ventaja de esta tecnología es que varias personas a la ves pueden ver en el equipo la interacción de la misma.</p>
+							<div class="swiper-pagination swiper-pagination-white pagination-target" id="paginationActivacionesBtl"></div>
+							<div id="standEnFerias"></div>
+						</div>
+					</div>
+					<div class="col-md-6 m-0 p-0 box-left-slider">
+						<div class="sliderTarget1">
+							<div class="swiper-container" id="sliderActivacionesBtl">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0003_Layer 10.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0004_Layer 9.jpg" class="img-fluid"/>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" >
+					<div class="col-md-6 m-0 p-0 box-left-text">
+						<div class="text-content-box-left">
+							<h2 class="wow fadeInLeft tercerColor">Sensor de movimiento kinect</h2>
+							<p class="wow fadeInLeft">Esta tecnología te permite interactuar con el equipo sin necesidad de tocarlo, ya que detecta al usuario atreves de un sensor de movimiento . Es una solución en la cual todos querrán participar ya que es muy novedosa e interactiva.</p>
+							<div class="swiper-pagination swiper-pagination-white pagination-target" id="paginationStandEnFerias"></div>
+							<div id="matrimonios"></div>
+						</div>
+					</div>
+					<div class="col-md-6 m-0 p-0 box-right-slider">
+						<div class="sliderTarget1">
+							<div class="swiper-container" id="sliderStandEnFerias">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0005_Layer 8.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0006_Layer 7.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0007_Layer 6.jpg" class="img-fluid"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row flex-row-reverse">
+					<div class="col-md-6 m-0 p-0 box-right-text">
+						<div class="text-content-box-right">
+							<h2 class="wow fadeInRight tercerColor">Pantallas táctiles</h2>
+							<p class="wow fadeInRight">Esta tecnología es muy utilizada, ya que puedes interactuar con la pantalla a través de toques, es como un celular gigante, en ella se puede jugar cualquier tipo de juego tactil Es muy fácil de usar por lo cual permite realizar un registro de datos sencillo.</p>
+							<div class="swiper-pagination swiper-pagination-white pagination-target" id="paginationMatrimonios"></div>
+							<div id="eventosSociales"></div>
+						</div>
+					</div>
+					<div class="col-md-6 m-0 p-0 box-left-slider">
+						<div class="sliderTarget1">
+							<div class="swiper-container" id="sliderMatrimonios">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0000_Layer 13.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0001_Layer 12.jpg" class="img-fluid"/>
+									</div>
+									<div class="swiper-slide slideEquipos">
+										<img src="img/f_0002_Layer 11.jpg" class="img-fluid"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+		</section>
+		
+		<section class="paginaTipo2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="wow fadeInDown tercerColor text-center mb-3">Nuestro portafolio</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="nav nav-pills justify-content-center mb-5 custom-nav">
+						  <li class="nav-item ">
+							<a class="nav-link active-btn-portfolio btn-filter" href="javascript:void(0);" data-rel="all">Todos</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link btn-filter" href="javascript:void(0);" data-rel="eventos">Eventos</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link btn-filter" href="javascript:void(0);" data-rel="ferias">Stand en ferias</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link btn-filter" href="javascript:void(0);" data-rel="campanas">Campañas BTL</a>
+						  </li>
+						<li class="nav-item">
+							<a class="nav-link btn-filter" href="javascript:void(0);" data-rel="otros">Otros</a>
+						  </li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolioContent">
+			  <div class="portfolioMod all eventos">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				<div class="portfolioMod all eventos">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				
+				 <div class="portfolioMod all ferias">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				<div class="portfolioMod all campanas">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				<div class="portfolioMod all otros">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				<div class="portfolioMod all campanas">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				<div class="portfolioMod all eventos">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				<div class="portfolioMod all eventos">
+					<div class="portfolio-image"><img src="img/bg-portfolio.jpg" class="img-fluid"/></div>
+					<div class="portfolio-text">
+						<h2>MOdelos</h2>
+						<p>Tetxo descripcion</p>
+				  </div>
+			  </div>
+				
+				
+				
+			</div>
+			
+			
+		</section>
+		
+		<section class="paginaTipo4">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<h1 class="mb-5 wow fadeInDown">Preguntas Frecuentes (FAQ) </h1>
+					</div>
+
+					<div class="col-md-12">
+						<div class="marcoFaq">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="accordion" id="acordeon1">
+										<div  class="wow fadeInLeft" data-wow-duration="0.5s">
+											<div id="headingOne">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											 ¿En qué consiste el servicio?
+											</button>
+										  </h2>
+											
+
+											</div>
+
+											<div id="collapseOne" class="collapse show contenido-acordeon" aria-labelledby="headingOne" data-parent="#acordeon1">
+												<div class="">
+													Es una solución para eventos corporativos o sociales que incluye; el alquiler de equipos y personalización de aplicaciones fotográficas o de video interactivas.
+												</div>
+											</div>
+										</div>
+										<div  class="wow fadeInLeft" data-wow-duration="0.6s">
+											<div id="headingTwo">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											  ¿Cómo puedo adquirir el servicio?
+											</button>
+										  </h2>
+											
+
+											</div>
+											<div id="collapseTwo" class="collapse contenido-acordeon" aria-labelledby="headingTwo" data-parent="#acordeon1">
+												<div class="card-body">
+													<ol>
+														<li>Escoge el tipo de tecnología que se prefiera.</li>
+														<li>Selecciona el equipo de tu preferencia y juego.</li>
+														<li>Confírmanos la fecha, el lugar y la duración de tu evento.</li>
+													</ol>
+													Durante todo este proceso, uno de nuestros ejecutivos te asesorará para que elijas la mejor solución de acuerdo a tu evento. Contáctalo haciendo clic aquí.
+												</div>
+											</div>
+										</div>
+										<div  class="wow fadeInLeft" data-wow-duration="0.7s">
+											<div id="headingThree">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											  ¿Hay un soporte que se queda durante todo mi evento?
+											</button>
+										  </h2>
+											
+
+											</div>
+											<div id="collapseThree" class="collapse contenido-acordeon" aria-labelledby="headingThree" data-parent="#acordeon1">
+												<div>
+													Sí, tenemos un personal operativo que se encargará de asesorarte durante todo el evento
+												</div>
+											</div>
+										</div>
+										<div  class="wow fadeInLeft" data-wow-duration="0.8s">
+											<div id="headingFour">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+											 ¿Puedo personalizar el juego y el equipo con mi marca?
+											</button>
+										  </h2>
+											
+
+											</div>
+											<div id="collapseFour" class="collapse contenido-acordeon" aria-labelledby="headingFour" data-parent="#acordeon1">
+												<div>
+													Sí, puedes personalizar tanto el equipo como el juego.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6">
+									<div class="accordion" id="acordeon2">
+										<div  class="wow fadeInLeft" data-wow-duration="0.8s">
+											<div id="headingOne2">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">
+											  ¿Cuantas horas dura el alquiler?
+											</button>
+										  </h2>
+											
+
+											</div>
+
+											<div id="collapseOne2" class="collapse contenido-acordeon" aria-labelledby="headingOne2" data-parent="#acordeon2">
+												<div>
+													Tenemos paquetes de alquiler desde 4 horas en adelante, dependiendo de la duración de tu evento
+												</div>
+											</div>
+										</div>
+										<div  class="wow fadeInLeft" data-wow-duration="0.9s">
+											<div id="headingTwo2">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+											  ¿El servicio es solo para Lima?
+											</button>
+										  </h2>
+											
+
+											</div>
+											<div id="collapseTwo2" class="collapse contenido-acordeon" aria-labelledby="headingTwo2" data-parent="#acordeon2">
+												<div>
+													Ofrecemos nuestros servicios en Lima y Provincias. Realizamos envíos a todo el Perú
+												</div>
+											</div>
+										</div>
+										<div  class="wow fadeInLeft" data-wow-duration="1s">
+											<div id="headingThree2">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+											  ¿Venden los equipos?
+											</button>
+										  </h2>
+											
+
+											</div>
+											<div id="collapseThree2" class="collapse contenido-acordeon" aria-labelledby="headingThree2" data-parent="#acordeon2">
+												<div>
+													No, solo ofrecemos soluciones que combinan el alquiler de equipos para eventos corporativos o sociales.
+												</div>
+											</div>
+										</div>
+										<div  class="wow fadeInLeft" data-wow-duration="1.1s">
+											<div id="headingFour2">
+												<h2 class="mb-0">
+											<button class="btn-acordeon" type="button" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">
+											  ¿Dónde están ubicados?
+											</button>
+										  </h2>
+											
+
+											</div>
+											<div id="collapseFour2" class="collapse contenido-acordeon" aria-labelledby="headingFour2" data-parent="#acordeon2">
+												<div>
+													Puedes visitarnos en nuestro Showroom ubicado en San Isidro, para ver los equipos, previa coordinación con nuestro ejecutivo
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+		<section class="paginaTipo5" id="nosotros">
+			<div class="nosotros-middle">
+				<div class="container">
+					<div class="row pt-5">
+						<div class="col-lg-6 content-nosotros wow fadeInRight">
+							<img src="img/logo-white.png" class="logo-holigram" alt="logo holigram"/>
+							<p>Brindamos soluciones fotográficas dirigidas a eventos corporativos y sociales, desarrolladas por la agencia de experiencias interactivas HOLIGRAM, que cuenta con más de 9 años produciendo eventos y activaciones BTL.</p>
+
+							<p>Todos queremos compartir fotografías y videos en nuestras redes sociales, por eso Selfie Interactivo cuenta con las opciones ideales para lanzamientos de productos, stands en ferias, activaciones BTL, matrimonios o fiestas.</p>
+						</div>
+						<div class="col-lg-6"></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12" style="position: relative;">
+							<div class="video wow zoomIn">
+								<img src="img/video.jpg" class="img-fluid"/>
+								<a class="play-button"  onclick="openPopUp()"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="boton-nosotros"></div>
+		</section>
+
+		<section class="paginaTipo6" id="contacto">
+			<form>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="wow fadeInDown">Contacto</h1>
+							<p  class="wow fadeInLeft">Visítanos a nuestro Show Room y conoce todos los equipos.</p>
+
+							<div class="card-formulario mt-5">
+								<div class="container">
+									<div class="row">
+										<div class="col-sm-6">
+											<p style="text-align:left; margin-bottom:3px;" class="wow fadeInLeft">Nombre <span style="color:red;">*</span>
+											</p>
+											<input name="nombre" type="text" required="" class="custom-input wow fadeInLeft">
+										</div>
+										<div class="col-sm-6">
+											<p style="text-align:left; margin-bottom:3px;" class="wow fadeInRight">Apellido <span style="color:red;">*</span>
+											</p>
+											<input name="apellido" type="text" required="" class="custom-input wow fadeInRight">
+										</div>
+										<div class="col-sm-6">
+											<p style="text-align:left; margin-bottom:3px;" class="wow fadeInLeft">Empresa <span style="color:red;">*</span>
+											</p>
+											<input name="empresa" type="text" required="" class="custom-input wow fadeInLeft">
+										</div>
+										<div class="col-sm-6">
+											<p style="text-align:left; margin-bottom:3px;"  class="wow fadeInRight">Cargo <span style="color:red;">*</span>
+											</p>
+											<input name="cargo" type="text" required="" class="custom-input wow fadeInRight">
+										</div>
+										<div class="col-sm-6">
+											<p style="text-align:left; margin-bottom:3px;" class="wow fadeInLeft">Correo <span style="color:red;">*</span>
+											</p>
+											<input name="email" type="email" required="" class="custom-input wow fadeInLeft">
+										</div>
+										<div class="col-sm-6">
+											<p style="text-align:left; margin-bottom:3px;" class="wow fadeInRight">Teléfono <span style="color:red;">*</span>
+											</p>
+											<input name="telf" type="text" required="" class="custom-input wow fadeInRight">
+										</div>
+										<div class="col-sm-12">
+											<p style="text-align:left; margin-bottom:3px;" class="wow fadeInLeft">Asunto del Mensaje <span style="color:red;">*</span>
+											</p>
+											<select name="asunto" class="custom-input wow fadeInLeft" style="width:100%;" required="">
+												<option value="" disabled="" selected="">Elige una opción</option>
+												<option value="Eventos corporativos">Eventos corporativos</option>
+												<option value="Ferias">Ferias</option>
+												<option value="Campañas BTL">Campañas BTL</option>
+												<option value="Implementación Fija">Implementación Fija</option>
+												<option value="Oportunidad Laboral">Oportunidad Laboral</option>
+												<option value="Alianza Estratégica">Alianza Estratégica</option>
+												<option value="Otros">Otro</option>
+											</select>
+										</div>
+										<div class="col-sm-12">
+											<p style="text-align:left; margin-bottom:3px;"  class="wow fadeInRight">Mensaje <span style="color:red;">*</span>
+											</p>
+											<textarea name="mensaje" rows="1" cols="20" required="" class="custom-input wow fadeInRight"></textarea>
+										</div>
+										<div class="col-sm-12">
+											<p style="text-align:left; margin-bottom:3px;"  class="wow fadeInLeft">¿Cómo se entero de nosotros? <span style="color:red;">*</span>
+											</p>
+											<select name="como" class="custom-input wow fadeInLeft" style="width:100%;" required="">
+												<option value="" disabled="" selected="">Elige una opción</option>
+												<option value="Web Holigram">Web Holigram</option>
+												<option value="Google">Google</option>
+												<option value="Facebook">Facebook</option>
+												<option value="Publicidad en otras páginas / blogs">Publicidad en otras páginas / blogs</option>
+												<option value="Correo electrónico">Correo electrónico</option>
+												<option value="Aviso en diarios">Aviso en diarios</option>
+												<option value="Aviso en revistas">Aviso en revistas</option>
+												<option value="Referidos">Referidos</option>
+												<option value="Llamada telefónica">Llamada telefónica</option>
+												<option value="Otros">Otros</option>
+											</select>
+										</div>
+										<div class="col-sm-6" style="text-align: left;"> <img src="img/codeCapt.jpg" width="120" height="30" border="1" alt="CAPTCHA">
+											<p style="text-align: left;"  class="wow fadeInRight"> <small style="text-align: left; width: 100%;">Escriba los digitos de la imagen</small>
+												<input class="custom-input wow fadeInRight" type="text" size="6" maxlength="5" name="captcha" value="" style="width: 20%">
+											</p>
+										</div>
+										<div class="col-sm-12">
+											<button type="submit" class="btn-formulario wow zoomIn">Enviar Mensaje</button>
+											<div id="loading" style="margin-top:20px; display:none"><strong style="font-size:18px; color:#F08600">Espere, enviando...</strong>
+											</div>
+											<div id="result" style="margin-top:20px; display:none"><strong style="font-size:18px; margin-top:10px; color:#3E9E02">Gracias por escribirnos.</strong>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+
+		<footer>
+			<div class="footer1 cuartoBackground">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 telefono"><img src="img/phone.png" width="32" height="32" alt="icono-phone"/> (511) 476 2692 / (511) 936 683 434</div>
+						<div class="col-md-4 direccion"><img src="img/addre.png" width="32" height="32" alt="icon-direccion"/> Calle 28 N°197 Corpac San Isidro, Lima, Perú.</div>
+						<div class="col-md-4 correo"><img src="img/rocket.png" width="32" height="32" alt="icon-correo"/> marketing@holigram.pe</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer2">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 creditos">Copyright © 2020 Desing by Holigram.net</div>
+						<div class="col-md-6">
+							<ul class="redes-sociales">
+								<li><img src="img/instagram-01.png"/>
+								</li>
+								<li><img src="img/facebook-01.png"/>
+								</li>
+								<li><img src="img/whassap-01.png"/>
+								</li>
+								<li><img src="img/youtube-01.png"/>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+
+
+	</main>
+	<style>
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+		/*.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}*/
+	</style>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="swiper/dist/js/swiper.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		var swiper1 = new Swiper( '#sliderHead', {
+			centeredSlides: true,
+			speed: 2000,
+			parallax: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		} );
+
+
+		var swiper2 = new Swiper( '#equipoSlider', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		} );
+		
+		$(window).ready(function() {
+			var wi = $(window).width();
+			$("#test").text('Initial screen width is currently: ' + wi + 'px.');
+			
+			$(window).resize(function() {
+				resizeWindows();
+			});
+		});
+		
+		
+		
+		var swiper3 = new Swiper( '#sliderEventosCorporativos', {
+			centeredSlides: true,
+			speed: 2000,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '#paginationeventosCorporativos',
+				clickable: true,
+			},
+		} );
+
+		var swiper4 = new Swiper( '#sliderActivacionesBtl', {
+			centeredSlides: true,
+			speed: 2000,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '#paginationActivacionesBtl',
+				clickable: true,
+			},
+		} );
+		var swiper5 = new Swiper( '#sliderStandEnFerias', {
+			centeredSlides: true,
+			speed: 2000,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '#paginationStandEnFerias',
+				clickable: true,
+			},
+		} );
+		var swiper6 = new Swiper( '#sliderMatrimonios', {
+			centeredSlides: true,
+			speed: 2000,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '#paginationMatrimonios',
+				clickable: true,
+			},
+		} );
+		var swiper7 = new Swiper( '#sliderEventosSociales', {
+			centeredSlides: true,
+			speed: 2000,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '#paginationEventosSociales',
+				clickable: true,
+			},
+		} );
+
+
+
+		var swiper8 = new Swiper( '#contenidos-slider', {
+			spaceBetween: 30,
+			effect: 'fade',
+			speed: 900,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: true,
+			},
+			 on: {
+			slideChange: function () {
+			  
+				
+				/*console.log(swiper8.activeIndex);*/
+				changeIconContenidos(swiper8.activeIndex);
+				
+				},
+			}
+			
+		} );
+		
+		 var swiper9 = new Swiper('#screenPhone', {
+		  direction: 'vertical',
+			 
+		});
+		
+		
+		function changeIconContenidos(cual)
+		{
+			$(".iconosContenidos").removeClass("icono-activo");
+			$("#c"+cual).addClass("icono-activo");
+			swiper9.slideTo(cual);
+		}
+		function stopSlideAndChangeContenido(cual)
+		{
+			swiper8.autoplay.stop();
+			swiper8.slideTo(cual);
+			swiper9.slideTo(cual); 
+		}
+		
+		var cantPerView=2;
+		function reorderPortfolio()
+		{
+			
+			var count=0;
+			var reverse=false;
+			var cantItems=document.querySelector('.portfolioContent').children.length;
+			$(".portfolioMod").removeClass("portfolioReverse");
+			for(i=0;i<cantItems;i++)
+			{
+				if($(".portfolioMod:eq("+i+")").is(':visible'))
+			   {
+				 	count++;
+				   console.log("item "+i+ "es visible");
+			   }
+				
+				if(reverse)
+			   {
+				   $(".portfolioMod:eq("+i+")").addClass("portfolioReverse");
+			   }
+				if(count==cantPerView)
+			   {
+				   count=0;
+				   if(reverse)
+				  {
+					  reverse=false;
+				  }else
+				  {
+					   reverse=true;
+				  }
+			   }
+				
+			}
+		}
+		
+		reorderPortfolio();
+		
+		$(function() {
+			var selectedClass = "";
+			var wait=false;
+			$(".btn-filter").click(function(){
+				
+				if(!wait)
+			   {
+				   wait=true;
+					$(".btn-filter").removeClass("active-btn-portfolio");
+					$(this).addClass("active-btn-portfolio");
+					selectedClass = $(this).attr("data-rel");
+					$(".portfolioMod").hide( 500, function() {
+						$("."+selectedClass).show( 700, function() {
+							reorderPortfolio();
+							wait=false;
+						  });
+					});
+			   }
+				
+				
+				
+				
+				/*selectedClass = $(this).attr("data-rel");
+
+				$(".portfolioContent").fadeTo(100, 0.1);
+				$(".portfolioMod").not("."+selectedClass).fadeOut();
+
+				setTimeout(function() {
+				  $("."+selectedClass).fadeIn();
+				  $(".portfolioContent").fadeTo(500, 1);
+				}, 500);*/
+				
+				
+				
+
+			});
+		});
+		
+		
+		
+		function resizeWindows()
+		{
+			var wi = $(window).width();
+				console.log(wi);
+				if (wi <= 768){
+					cantPerView=1;
+					reorderPortfolio();
+				}
+				else
+				{
+					cantPerView=2;
+					reorderPortfolio();
+				}
+		}
+		resizeWindows();
+	</script>
+	<script>
+	$(".bg-top").hide();
+	
+	function openPopUp()
+	{
+		$(".bg-top").show();
+		//$("#embedVid").attr("src","https://player.vimeo.com/video/191562048?autoplay=1");
+		$("#embedVid").attr("src","https://player.vimeo.com/video/400086278?autoplay=1");
+	}
+	
+	function closePopUp()
+	{
+		$(".bg-top").hide();
+		$("#embedVid").attr("src","");
+	}
+		
+		
+	wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          //console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+	wow.init();	
+	</script>
+
+</html>
