@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Simply Rounded';
+    src: url('SimplyRounded.eot');
+    src: url('SimplyRounded.eot?#iefix') format('embedded-opentype'),
+        url('SimplyRounded.woff2') format('woff2'),
+        url('SimplyRounded.woff') format('woff'),
+        url('SimplyRounded.ttf') format('truetype'),
+        url('SimplyRounded.svg#SimplyRounded') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
